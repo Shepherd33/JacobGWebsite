@@ -1,0 +1,171 @@
+:root { 
+    --main-color: #111111;
+    --secondary-color: #282828;
+    --third-color: #313131;
+    --fourth-color: #a8a8a8;
+    --header-text: #ffffff;
+    --body-text: #838383;
+}
+.corner-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 20px 20px;
+    background-color: var(--main-color);
+    color: var(--header-text);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.corner-button:hover {
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
+}
+
+.tilt-hover {
+    display: flex;
+    perspective: 1000px; 
+    justify-content: center;
+}
+.tilt-hover img {
+    width: 400px;
+    height: auto;
+    justify-content: center;
+    transform-origin: top;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tilt-hover img:hover {
+    transform: scale(1.05);
+    transform: rotateX(10deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.animated-hover {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center the image horizontally */
+    margin: 20px 0; /* Optional: Add margin for spacing */
+}      
+
+.animated-hover img {
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.animated-hover img:hover {
+    transform: scale(1.05);
+}
+
+.rounded-image {
+  width: 400px; /* Adjust the width of the image */
+  height: auto;
+  border-radius: 12px; /* Rounds the corners */
+}
+
+/* How to animate */
+@keyframes rotate {
+    0% {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: rotate(180deg) scale(0.35);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(360deg) scale(1);
+    }
+}
+  /* What to animate */
+.animated-box {
+    width: 100px;
+    height: 50px;
+    background-color: var(--main-color);
+    border-radius: 12px;
+    color: var(--header-text);
+    display: flex;
+    justify-content: center; /* Where the rotational pivot is */
+    align-items: center;
+    font-size: 25px;
+    margin: 5px;
+    padding: 1px 10px;
+  
+    /* Apply the animation */
+    animation: rotate 0.8s ease-in-out 0.05s forwards;
+}
+
+.navbar {
+    display: flex;
+    overflow: hidden;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    position: fixed; /* Keeps the Navbar at the top of the screen while scrolling  */
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar a {
+    color: var(--header-text);
+    text-align: center;
+    padding: 15px 30px; /*  Increases space between text and outline  */
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: var(--secondary-color);
+    /*color: var;*/
+}
+
+header {
+    float: left;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    padding: 20px;
+    left: 20px;
+    right: 20px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width: calc(100% - 40px);
+    /*box-sizing: border-box;*/
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--third-color);
+    text-align: center;
+}
+
+h1 {
+    color: var(--header-text);
+}
+
+h2 {
+    color: var(--header-text);
+}
+
+p {
+    color: var(--body-text);
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+}
