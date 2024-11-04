@@ -1,0 +1,201 @@
+:root { 
+    --main-color: #3d384e;
+    --secondary-color: #524c68;
+    --third-color: #f1f1f1;
+    --fourth-color: #9d6b6b;
+    --header-text: #a49bba;
+    --body-text: #4a4551;
+}
+.corner-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 20px 20px;
+    background-color: var(--main-color);
+    color: var(--header-text);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.corner-button:hover {
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
+}
+
+.tilt-hover {
+    display: flex;
+    perspective: 1000px; 
+    justify-content: center;
+}
+.tilt-hover img {
+    width: 400px;
+    height: auto;
+    justify-content: center;
+    transform-origin: top;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tilt-hover img:hover {
+    transform: scale(1.05);
+    transform: rotateX(10deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.animated-hover {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center the image horizontally */
+    margin: 20px 0; /* Optional: Add margin for spacing */
+}      
+
+.animated-hover img {
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.animated-hover img:hover {
+    transform: scale(1.05);
+}
+
+.rounded-image {
+  width: 400px; /* Adjust the width of the image */
+  height: auto;
+  border-radius: 12px; /* Rounds the corners */
+}
+
+/* How to animate */
+@keyframes rotate {
+    0% {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: rotate(180deg) scale(0.35);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(360deg) scale(1);
+    }
+}
+  /* What to animate */
+.animated-box {
+    width: 100px;
+    height: 50px;
+    background-color: var(--main-color);
+    border-radius: 12px;
+    color: var(--header-text);
+    display: flex;
+    justify-content: center; /* Where the rotational pivot is */
+    align-items: center;
+    font-size: 25px;
+    margin: 5px;
+    padding: 1px 10px;
+  
+    /* Apply the animation */
+    animation: rotate 0.8s ease-in-out 0.05s forwards;
+}
+
+.navbar {
+    display: flex;
+    overflow: hidden;
+    background-color: var(--main-color);
+    /* border-radius: 10px; */
+    position: fixed; /* Keeps the Navbar at the top of the screen while scrolling  */
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: flex-start;
+
+    resize: vertical; /* Allows the ability to drag and change vertical height */
+}
+
+.navbar a {
+    color: var(--header-text);
+    text-align: center;
+    padding: 20px 30px; /*  Increases space between text and outline  */
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: var(--secondary-color);
+    /*color: var;*/
+}
+
+header {
+    /* float: left; */
+    display: flex;
+    justify-content: center;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    /* padding: 10px; */
+    /* left: 20px;
+    right: 20px; */
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    /* width: calc(100% - 40px); */
+    width: 800px;
+    /*box-sizing: border-box;*/
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    font-family: Bahnschrift;
+    font-weight: 300;
+    font-stretch: condensed;
+    background-color: var(--third-color);
+    text-align: center;
+}
+
+h1 {
+    color: var(--header-text);
+}
+
+h2 {
+    color: var(--header-text);
+}
+
+p {
+    margin: 15px auto;
+    max-width: 800px;
+    color: var(--body-text);
+    text-align: justify;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    padding: 10px 0px 10px 0px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+
+    color: var(--header-text);
+    border-radius: 5px;
+    position: absolute; /* Keeps the footer at the bottom of the page */
+}
+
+/* #about_me {
+    margin-top: 90px;
+}
+
+#documents {
+    margin-top: 90px;
+} */
